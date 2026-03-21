@@ -35,26 +35,7 @@ body {
     margin: 20px;
     overflow: visible !important;
 }
-.corner-photo {
-  position: fixed;
-  width: 70px;       /* size (you can change) */
-  height: 70px;
-  border-radius: 50%; /* makes it circle */
-  object-fit: cover;
-  top: 15px;
-  z-index: 1000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
 
-/* Left corner */
-.corner-photo.left {
-  left: 15px;
-}
-
-/* Right corner */
-.corner-photo.right {
-  right: 15px;
-}
 
 .floating-elements {
     position: fixed;
