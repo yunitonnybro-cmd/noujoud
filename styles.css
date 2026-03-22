@@ -317,3 +317,43 @@ h2 {
     transform: scale(1.05);
     background: var(--secondary-color);
 } 
+/* Combined and updated styling for both heart images */
+.corner-image {
+  position: absolute; /* Keep them floating above the rest of your site */
+  top: 15px;          /* Distance from the top of the screen */
+  width: 90px;        /* A good size for the hearts */
+  z-index: 100;       /* Ensures they stay on top of background images */
+  
+  /* THIS IS THE MAGIC HEART PART */
+  /* We define a specific geometric polygon to clip the image into a heart shape. */
+  clip-path: polygon(
+    50% 15%,  /* Top center notch */
+    61% 0%,   /* Right curve peak */
+    82% 0%,   /* Right curve outer edge */
+    100% 18%, /* Right middle edge */
+    100% 40%, 
+    50% 100%, /* The bottom sharp point */
+    0% 40%,   /* Left middle edge */
+    0% 18%,   /* Left curve outer edge */
+    18% 0%,   /* Left curve peak */
+    39% 0%    /* Left center notch edge */
+  );
+
+  /* Clean and consistent style */
+  object-fit: cover;  /* Prevents the image from stretching if not a perfect square */
+  
+  /* We must remove border-radius, as clip-path defines the entire shape now. */
+  
+  /* Soft shadow to make them stand out (this still works around the new shape!) */
+  box-shadow: 0 4px 8px rgba(220, 50, 50, 0.4); /* A romantic red-tinted shadow */
+}
+
+/* Specific position for the left image */
+.top-left {
+  left: 15px;
+}
+
+/* Specific position for the right image */
+.top-right {
+  right: 15px;
+}
